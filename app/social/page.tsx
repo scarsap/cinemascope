@@ -27,20 +27,20 @@ export default function Social() {
   ];
 
   return (
-    <div className="bg-[#1a1a1a] text-white min-h-screen py-32 flex flex-col items-center justify-center w-full">
-      <div className="max-w-4xl w-full px-6 sm:px-8 flex-1 flex flex-col">
+    <div className="bg-gradient-to-b from-[#FAF8F5] to-[#F5EDE6] text-[#2A2520] min-h-screen py-56 flex flex-col items-center justify-center w-full">
+      <div className="max-w-4xl w-full px-8 sm:px-12 flex-1 flex flex-col">
         {/* Header */}
-        <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold text-[#DAA520] mb-6" style={{ fontFamily: 'Playfair Display' }}>
+        <div className="text-center mb-48">
+          <h1 className="text-5xl font-bold text-[#D4AF37] mb-8" style={{ fontFamily: 'Crimson Text' }}>
             Follow CinemaScope
           </h1>
-          <p className="text-gray-300 text-lg">
+          <p className="text-[#5A5550] text-lg leading-relaxed">
             Stay connected for the latest episodes, behind-the-scenes content, and film discussions
           </p>
         </div>
 
         {/* Social Cards */}
-        <div className="grid md:grid-cols-3 gap-10 mb-20">
+        <div className="grid md:grid-cols-3 gap-16 mb-56">
           {socials.map((social) => (
             <a
               key={social.name}
@@ -49,23 +49,24 @@ export default function Social() {
               rel="noopener noreferrer"
               className="group"
             >
-              <div className={`bg-gradient-to-br ${social.color} p-0.5 rounded-lg hover:scale-105 transition transform duration-300`}>
-                <div className="bg-black p-8 rounded-lg h-full flex flex-col items-center justify-center text-center group-hover:bg-[#2a2a2a] transition">
-                  <div className="relative w-20 h-20 mb-4">
+              <div className={`bg-gradient-to-br ${social.color} p-0.5 rounded-xl hover:scale-105 transition transform duration-300 border-2 border-[#D4AF37]`} style={{ boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}>
+                <div className="bg-[#F5EDE6] border border-[#E8DCC8] p-8 rounded-xl h-full flex flex-col items-center justify-center text-center group-hover:bg-[#E8DCC8] transition">
+                  <div className="relative w-16 h-16 mb-3">
                     <Image
                       src={social.icon}
                       alt={social.name}
                       fill
+                      unoptimized
                       className="object-contain"
                     />
                   </div>
-                  <h2 className="text-2xl font-bold text-white mb-2" style={{ fontFamily: 'Playfair Display' }}>
+                  <h2 className="text-2xl font-bold text-[#2A2520] mb-2" style={{ fontFamily: 'Crimson Text' }}>
                     {social.name}
                   </h2>
-                  <p className="text-[#DAA520] font-semibold break-all">
+                  <p className="text-[#D4AF37] font-semibold break-all">
                     {social.handle}
                   </p>
-                  <p className="text-gray-400 text-sm mt-4 group-hover:text-[#DAA520] transition">
+                  <p className="text-[#5A5550] text-sm mt-4 group-hover:text-[#D4AF37] transition">
                     Visit →
                   </p>
                 </div>
@@ -74,42 +75,51 @@ export default function Social() {
           ))}
         </div>
 
-        {/* Personal Socials */}
-        <div className="bg-black border-2 border-[#DAA520] p-8 rounded-lg">
-          <h2 className="text-2xl font-bold text-[#DAA520] mb-6" style={{ fontFamily: 'Playfair Display' }}>
-            Follow Scarlett
-          </h2>
-          <p className="text-gray-300 mb-6">
-            For more from host Scarlett Sapieha, check out her personal channels:
-          </p>
-          <div className="space-y-3">
-            <div>
-              <p className="text-gray-400 text-sm mb-1">Instagram</p>
-              <a href="https://instagram.com/scarsap" target="_blank" rel="noopener noreferrer" className="text-[#DAA520] hover:text-[#D32F2F] font-semibold transition">
-                @scarsap
-              </a>
+        {/* TikTok Embed Section */}
+        <div className="my-32">
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Video 1 */}
+            <div className="flex justify-center">
+              <div className="max-w-xs">
+                <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@cfmu.cinemascope/video/7466181152328420613" data-unique-id="cfmu.cinemascope" data-video-id="7466181152328420613">
+                  <section>
+                    <a target="_blank" title="@cfmu.cinemascope" href="https://www.tiktok.com/@cfmu.cinemascope">@cfmu.cinemascope</a>
+                  </section>
+                </blockquote>
+              </div>
             </div>
-            <div>
-              <p className="text-gray-400 text-sm mb-1">Letterboxd</p>
-              <a href="https://letterboxd.com/scarsap/" target="_blank" rel="noopener noreferrer" className="text-[#DAA520] hover:text-[#D32F2F] font-semibold transition">
-                @scarsap
-              </a>
+
+            {/* Video 2 */}
+            <div className="flex justify-center">
+              <div className="max-w-xs">
+                <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@cfmu.cinemascope/video/7427154292366167301" data-unique-id="cfmu.cinemascope" data-video-id="7427154292366167301">
+                  <section>
+                    <a target="_blank" title="@cfmu.cinemascope" href="https://www.tiktok.com/@cfmu.cinemascope">@cfmu.cinemascope</a>
+                  </section>
+                </blockquote>
+              </div>
             </div>
-            <div>
-              <p className="text-gray-400 text-sm mb-1">LinkedIn</p>
-              <a href="https://linkedin.com/in/scarlett-sapieha" target="_blank" rel="noopener noreferrer" className="text-[#DAA520] hover:text-[#D32F2F] font-semibold transition">
-                Scarlett Sapieha
-              </a>
+
+            {/* Video 3 */}
+            <div className="flex justify-center">
+              <div className="max-w-xs">
+                <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@cfmu.cinemascope/video/7412432356528688390" data-unique-id="cfmu.cinemascope" data-video-id="7412432356528688390">
+                  <section>
+                    <a target="_blank" title="@cfmu.cinemascope" href="https://www.tiktok.com/@cfmu.cinemascope">@cfmu.cinemascope</a>
+                  </section>
+                </blockquote>
+              </div>
             </div>
           </div>
         </div>
+        <script async src="https://www.tiktok.com/embed.js"></script>
 
         {/* Info Section */}
-        <div className="mt-16 pt-12 border-t-4 border-[#D32F2F] text-center">
-          <p className="text-gray-400 mb-4">
+        <div className="mt-40 pt-24 border-t-2 border-[#C41E1E] text-center">
+          <p className="text-[#5A5550] mb-8 text-lg">
             📻 CinemaScope airs every Thursday at 1 PM on CFMU.ca
           </p>
-          <p className="text-gray-400">
+          <p className="text-[#5A5550] text-lg">
             🎬 Interview footage and exclusive content available on social media
           </p>
         </div>

@@ -1,18 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --red-cinema: #D32F2F;
-  --gold-cinema: #DAA520;
-  --dark-bg: #1a1a1a;
-  --text-light: #ffffff;
-  --text-muted: #cccccc;
+  --red-cinema: #C41E1E;
+  --gold-cinema: #D4AF37;
+  --dark-bg: #FAF8F5;
+  --text-light: #2A2520;
+  --text-muted: #5A5550;
+  --text-light-muted: #8A7F7A;
+  --card-bg: #F5EDE6;
+  --card-bg-lighter: #E8DCC8;
+  --charcoal: #2A2520;
+  --warm-grey: #5A5550;
+  --deep-black: #1A1A1A;
+  --theatre-cream: #FAF8F5;
+  --parchment: #E8DCC8;
+  --off-white: #F5EDE6;
+  --deep-crimson: #8B1414;
+  --bright-red: #F47070;
+  --warm-bronze: #C9A961;
 }
 
 @theme inline {
   --color-background: var(--dark-bg);
   --color-foreground: var(--text-light);
-  --font-display: 'Playfair Display', serif;
+  --font-display: 'Crimson Text', serif;
   --font-body: 'Inter', sans-serif;
 }
 
@@ -39,10 +51,16 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 800;
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
   color: var(--text-light);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
+}
+
+/* Light theme adjustments */
+body {
+  background: var(--dark-bg);
+  color: var(--text-light);
 }
 
 h1 {

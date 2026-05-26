@@ -58,21 +58,21 @@ export default function AudioPlayer({ src }: AudioPlayerProps) {
   };
 
   return (
-    <div className="bg-[#2a2a2a] p-4 rounded-sm">
+    <div className="bg-[#F5EDE6] p-4 rounded-sm">
       <audio ref={audioRef} src={src} />
 
       <div className="flex items-center gap-4">
         {/* Play Button */}
         <button
           onClick={togglePlay}
-          className="bg-[#D32F2F] hover:bg-[#DAA520] text-white px-4 py-2 font-bold transition flex-shrink-0"
+          className="text-[#C41E1E] hover:text-[#D4AF37] text-2xl transition flex-shrink-0"
           aria-label={isPlaying ? 'Pause' : 'Play'}
         >
           {isPlaying ? '⏸' : '▶'}
         </button>
 
         {/* Time Display */}
-        <span className="text-[#DAA520] text-sm font-mono w-12 flex-shrink-0">
+        <span className="text-[#D4AF37] text-sm font-mono w-12 flex-shrink-0">
           {formatTime(currentTime)}
         </span>
 
@@ -84,9 +84,9 @@ export default function AudioPlayer({ src }: AudioPlayerProps) {
             max={duration || 0}
             value={currentTime}
             onChange={handleProgressChange}
-            className="w-full h-2 bg-[#1a1a1a] accent-[#D32F2F] cursor-pointer rounded-full appearance-none"
+            className="w-full h-2 bg-[#1a1a1a] accent-[#C41E1E] cursor-pointer rounded-full appearance-none"
             style={{
-              background: `linear-gradient(to right, #D32F2F 0%, #D32F2F ${
+              background: `linear-gradient(to right, #C41E1E 0%, #C41E1E ${
                 duration ? (currentTime / duration) * 100 : 0
               }%, #1a1a1a ${duration ? (currentTime / duration) * 100 : 0}%, #1a1a1a 100%)`
             }}
@@ -94,7 +94,7 @@ export default function AudioPlayer({ src }: AudioPlayerProps) {
         </div>
 
         {/* Duration */}
-        <span className="text-[#DAA520] text-sm font-mono w-12 flex-shrink-0 text-right">
+        <span className="text-[#D4AF37] text-sm font-mono w-12 flex-shrink-0 text-right">
           {formatTime(duration)}
         </span>
       </div>
