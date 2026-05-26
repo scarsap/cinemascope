@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --red-cinema: #C41E1E;
+  --gold-cinema: #D4AF37;
+  --dark-bg: #FAF8F5;
+  --text-light: #2A2520;
+  --text-muted: #5A5550;
+  --text-light-muted: #8A7F7A;
+  --card-bg: #F5EDE6;
+  --card-bg-lighter: #E8DCC8;
+  --charcoal: #2A2520;
+  --warm-grey: #5A5550;
+  --deep-black: #1A1A1A;
+  --theatre-cream: #FAF8F5;
+  --parchment: #E8DCC8;
+  --off-white: #F5EDE6;
+  --deep-crimson: #8B1414;
+  --bright-red: #F47070;
+  --warm-bronze: #C9A961;
+}
+
+@theme inline {
+  --color-background: var(--dark-bg);
+  --color-foreground: var(--text-light);
+  --font-display: 'Crimson Text', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: -0.5px;
+}
+
+/* Light theme adjustments */
+body {
+  background: var(--dark-bg);
+  color: var(--text-light);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--gold-cinema);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--red-cinema);
+}
+
+/* Film strip decorative elements */
+.film-strip {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.film-strip::before,
+.film-strip::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--red-cinema) 0px,
+    var(--red-cinema) 20px,
+    transparent 20px,
+    transparent 30px
+  );
+}
+
+.film-strip::before {
+  top: 0;
+}
+
+.film-strip::after {
+  bottom: 0;
+}
+
+/* Gradient accent */
+.gradient-gold {
+  background: linear-gradient(135deg, var(--gold-cinema) 0%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Cinematic shadow */
+.cinematic-shadow {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(211, 47, 47, 0.3);
+}
+
+/* Spacing utilities */
+.section-spacing {
+  padding: 4rem 0;
+}
+
+/* Button styles */
+button {
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--red-cinema);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--gold-cinema);
+  color: var(--dark-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(211, 47, 47, 0.5);
+}
